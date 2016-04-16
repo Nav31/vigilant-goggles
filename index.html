@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Twitter HeatMap</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href="stylesheet.css" rel="stylesheet">
+	<script src="/angular/angular.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script src="/module.js"></script>
+	<script src="mainpage.controller.js" defer></script>
+	<script src="mainpage.factory.js" defer></script>
+</head>
+<body>
+	<div class="container" ng-app="heatmap">
+		<h1 class="intro title">Welcome to Twitter HeatMap</h1>
+		<h6 class="intro words">Shows where in the world people are tweeting about a topic</h6>
+		<div ng-controller="mainpageCtrl">
+			<input ng-model= "inputText" id="input" type='text' class="input" placeholder="Search Here:"></input>
+			<button ng-click="getStream()" type="submit" class="btn btn-primary-outline btn-lg">SUBMIT</button>
+			<button type="button" class="btn btn-danger-outline btn-lg" ng-click="stopStream()">Stop</button>
+			<button type="button" class="btn btn-info-outline btn-lg" ng-click="clearMap()">Clear</button>	
+		</div>
+	</div>
+	<div id="map-canvas"></div>
+    <script src="socket.io/socket.io.js" defer></script>
+    <script src='socketio.js' defer></script>
+	<script src="map.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBl6x_QN3UErjKTrfRjaL8oClY3bWFoz8&libraries=visualization" defer></script>
+</body>
+<footer class='footer'>
+	<p>A Massimo Crapanzano and Navjot Singh Production © </p>
+</footer>
+</html>

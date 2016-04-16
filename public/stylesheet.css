@@ -1,0 +1,42 @@
+
+*{
+	box-sizing: border-box;
+}
+
+.intro {
+	font-family: Lobster;
+}
+
+.title {
+	color: #337ab7;
+}
+
+.words {
+	color: #43A047;
+}
+
+.input {
+	background-color: #ECEFF1;
+}
+
+.container {
+	text-align: center;
+}
+
+#input {
+	margin-right: 25px;
+	margin-top: 20px;
+}
+
+#map-canvas {
+  width: 100%; 
+  height: 800px; 
+  margin-top: 20px;
+  position: center;
+}
+
+.footer {
+	text-align: center;
+	font-size: 12px;
+}
+
