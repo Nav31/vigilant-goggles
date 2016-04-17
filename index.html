@@ -26,7 +26,7 @@
 				<input ng-model= "locationText" type="text" class="input" placeholder="New York, New York"></input>
 			</form>
 			<br/>		
-			<button ng-click="getStream()" type="submit" class="btn btn-primary-outline btn-lg">SUBMIT</button>
+			<button ng-click="getStream(); getMapCenter" type="submit" class="btn btn-primary-outline btn-lg">SUBMIT</button>
 			<button type="button" class="btn btn-danger-outline btn-lg" ng-click="stopStream()">Stop</button>
 			<button type="button" class="btn btn-info-outline btn-lg" ng-click="clearMap()">Clear</button>	
 		</div>

@@ -17,4 +17,10 @@ app.controller('mainpageCtrl', ($scope, MainpageFactory) => {
 		socket.emit('end');
 		initMap();
 	};
+
+	$scope.getMapCenter = () => {
+		console.log('Map will be centered at', $scope.locationText);
+		MainpageFactory.getMapCenter($scope.locationText)
+		.then(() => {console.log('Maps ceter location changed')})
+	}
 });

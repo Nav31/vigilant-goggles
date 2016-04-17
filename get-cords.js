@@ -32,4 +32,13 @@ var getCoords = (location, callbackFunc) => {
 	});	
 };
 
+// make a new func that only get coords for single location...
+getCoordMap = (mapLocation) => {
+	http.get(frontUrl, mapLocation, backUrl, (res) => {
+		var newString = "";
+		res.on('data', chunck => {newString += chunck})
+		.on('error' , (e) => {console.log('Error in GetCoordMap', e)})
+	})
+};
+
 module.exports = getCoords;

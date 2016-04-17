@@ -11,6 +11,7 @@ const getCords = require('../get-cords.js');
 const frontUrl = 'https://maps.googleapis.com/maps/api/geocode/json?address=';
 const backUrl = '&key='+ google.serverKey;
 
+// for streaming
 io.on('connection', (socket) => {
 	console.log('we are connected with this id', socket.id);
 	socket.emit('end');
@@ -29,6 +30,12 @@ io.on('connection', (socket) => {
 		});
 		res.sendStatus(200);
 	});
+
+	// router.get("/stream/:location", (req, res, next) => {
+	// 	if(req.params.location) {
+	// 		getCords(location,)
+	// 	}
+	// })
 	
 }); 
 
