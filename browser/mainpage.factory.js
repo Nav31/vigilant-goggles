@@ -7,7 +7,7 @@ app.factory('MainpageFactory', ($http) => {
 		},
 		getMapCenter: (locationText) => {
 			// to make a new route or not...
-			return $http.get('/api/stream/' + locationText);
+			return $http.get('/api/get/' + locationText);
 		}
 	};
 });

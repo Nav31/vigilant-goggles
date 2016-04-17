@@ -7,3 +7,12 @@ socket.on('tweet', (coordinates) => {
 	console.log("We are Coordinates",coordinates);
 });
 
+socket.on('coords', (mapCoordinates) => {
+	mapCoordinates = mapCoordinates;
+	initMap(mapCoordinates, 11.0);
+	setInterval(function(){
+    	initMap(mapCoordinates, 11.0);
+  }, 60000);
+});
+
+

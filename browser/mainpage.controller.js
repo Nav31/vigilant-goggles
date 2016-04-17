@@ -3,6 +3,9 @@
 app.controller('mainpageCtrl', ($scope, MainpageFactory) => {
 	$scope.getStream = function() {
 		console.log('IM SCOPE.INPUT TEXT', $scope.inputText);
+		if($scope.locationText){
+			MainpageFactory.getMapCenter($scope.locationText);
+		}
 		MainpageFactory.getStream($scope.inputText)
 		.then(function(){console.log('success');})
 	};

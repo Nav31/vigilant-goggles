@@ -31,11 +31,13 @@ io.on('connection', (socket) => {
 		res.sendStatus(200);
 	});
 
-	// router.get("/stream/:location", (req, res, next) => {
-	// 	if(req.params.location) {
-	// 		getCords(location,)
-	// 	}
-	// })
+	router.get("/get/:location", (req, res, next) => {
+		if(req.params.location) {
+			getCords(req.params.location, (coords) => {
+				socket.emit('coords', coords)
+			})
+		}
+	})
 	
 }); 
 

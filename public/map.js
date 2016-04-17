@@ -2,10 +2,10 @@
 
 var map, heatmap;
 var cordArray = [];
-function initMap() {
+function initMap(coordinates, zoom) {
   map = new google.maps.Map(document.getElementById('map-canvas'), {
-	  center: {lat: 30, lng: 0},
-	  zoom: 3.0,
+	  center: coordinates || {lat: 30, lng: 0},
+	  zoom: zoom || 3.0,
       mapTypeId: google.maps.MapTypeId.HYBRID,
       panControl: false,
       scrollwheel: false,
@@ -61,8 +61,8 @@ $(document).ready(function() {
 	    map: map
 	  });
   }, 2000);
-  setInterval(function(){
-    initMap();
-  }, 60000);
+  // setInterval(function(){
+  //   initMap();
+  // }, 60000);
 });
 
