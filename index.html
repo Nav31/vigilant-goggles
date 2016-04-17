@@ -17,7 +17,15 @@
 		<h1 class="intro title">Welcome to Twitter HeatMap</h1>
 		<h6 class="intro words">Shows where in the world people are tweeting about a topic</h6>
 		<div ng-controller="mainpageCtrl">
-			<input ng-model= "inputText" id="input" type='text' class="input" placeholder="Search Here:"></input>
+			<form>
+				Search for something:
+				<input ng-model= "inputText" id="input" type='text' class="input" placeholder="love"></input>
+				<br>
+				<br>
+				Optional, map center location:
+				<input ng-model= "locationText" type="text" class="input" placeholder="New York, New York"></input>
+			</form>
+			<br/>		
 			<button ng-click="getStream()" type="submit" class="btn btn-primary-outline btn-lg">SUBMIT</button>
 			<button type="button" class="btn btn-danger-outline btn-lg" ng-click="stopStream()">Stop</button>
 			<button type="button" class="btn btn-info-outline btn-lg" ng-click="clearMap()">Clear</button>	
