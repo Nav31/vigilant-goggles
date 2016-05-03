@@ -61,10 +61,8 @@ $(document).ready(function() {
 	    map: map
 	  });
   }, 2000);
-  setInterval(function(){
-    if(setInt){
-      initMap();
-    }
-  }, 60000);
+  // setInterval(function(){
+  //   initMap();
+  // }, 60000);
 });
 
