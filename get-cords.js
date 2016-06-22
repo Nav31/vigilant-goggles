@@ -16,7 +16,6 @@ var getCoords = (location, callbackFunc) => {
 		.on('end', () => {
 			if(JSON.parse(string).features[0]){
 				if(JSON.parse(string).features[0].center){
-					// console.log('mapboxString: ', JSON.parse(string).features[0].center);
 					var coordinates = JSON.parse(string).features[0].center; 
 					coordinates = {
 						lat: coordinates[1],

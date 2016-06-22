@@ -10,8 +10,6 @@ function initMap(coordinates, zoom) {
       panControl: false,
       scrollwheel: false,
       scaleControl: false,
-      //zoomControl: false,
-      //zoomControlOptions: false,
       rotateControl: false,
       panControlOptions: false,
       rotateControlOptions: false,
@@ -61,8 +59,5 @@ $(document).ready(function() {
 	    map: map
 	  });
   }, 2000);
-  // setInterval(function(){
-  //   initMap();
-  // }, 60000);
 });
 
